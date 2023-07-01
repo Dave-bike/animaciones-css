@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  border: 0;
+}
+
+/* GRID AREA MOBILE */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr 1fr 10fr 1fr;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title-page {
+  font-family: 'Bungee Spice', cursive;
+  font-size: 4em;
+}
+
+main {
+  grid-area: main;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 100vw;
+}
+
+.card {
+  text-align: center;
+  padding: 0 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.more {
+  background-color: black;
+  color: white;
+  width: 120px;
+}
+
+.more:hover {
+  background-color: green;
+}
+
+.title {
+  padding-top: 0.5em;
+}
+
+footer {
+  grid-area: footer;
+  width: 100vw;
+  background-image: url(../img/galaxy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+/* GRID AREA TABLET*/
+
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-areas:
+      "nav nav"
+      "main main"
+      "footer footer";
+  }
+  main {
+    width: 100vw;
+  }
+  footer {
+    width: 100vw;
+  }
+  .motorcycle {
+    display: grid;
+  }
+
+  .card-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin: 1em;
+  }
+}
+
+/* GRID AREA DESKTOP */
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-areas:
+      "nav"
+      "main"
+      "footer";
+  }
+  main {
+    width: 100vw;
+  }
+  .motorcycle {
+    display: grid;
+  }
+  footer {
+    width: 100vw;
+  }
+  .card-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin: 1em;
+  }
+}
